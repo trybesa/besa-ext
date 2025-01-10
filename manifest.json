@@ -1,0 +1,65 @@
+{
+    "manifest_version": 3,
+    "name": "BESA-bot",
+    "version": "1.0.0",
+    "description": "BESA helps you understand complex text by providing instant, AI-powered explanations when you select text on any webpage.",
+    "author": "hello@trybesa.com",
+    "minimum_chrome_version": "116",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "sidePanel",
+        "scripting",
+        "tabs"
+    ],
+    "optional_permissions": [
+        "clipboardWrite"
+    ],
+    "host_permissions": [
+        "https://app.trybesa.com/*",
+        "*://*/*"
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://app.trybesa.com/",
+        "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self'"
+    },
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "action": {
+        "default_title": "BESA",
+        "default_icon": {
+            "16": "icon16.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        }
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "side_panel": {
+        "default_path": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "exclude_matches": ["https://app.trybesa.com/*"],
+            "css": ["styles.css"],
+            "js": ["contentScript.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [{
+        "resources": [
+            "styles.css",
+            "popup.js",
+            "fonts/*",
+            "fonts/Space_Grotesk/static/*"
+        ],
+        "matches": ["*://*/*"]
+    }]
+}
+  

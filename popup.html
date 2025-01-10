@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Extractor</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="warning-banner">
+    <div class="warning-icon">ℹ️</div>
+    <div class="warning-text">
+      Some pages with dynamic content may not be fully captured. For best results, select specific text and use our selection feature.
+    </div>
+  </div>
+  <div id="chat-container">
+    <!-- Chat tab content -->
+    <div id="chat-tab" class="tab-content active">
+      <div id="messages">
+      </div>
+      <div id="input-container">
+        <div id="button-container">
+          <div id="stored-pages-container"></div>
+          <div id="summarize-button-container">
+            <button id="summarize-button">
+              <i class="fa-regular fa-file-lines"></i>
+              Summarize
+            </button>
+          </div>
+        </div>
+        <div id="input-field-container">
+          <input type="text" id="user-input" placeholder="Type your message...">
+          <button id="send-button">Send</button>
+        </div>
+        <div id="footer-buttons">
+          <button class="footer-button" id="new-chat-button">
+            <i class="fas fa-plus"></i>
+            New Chat
+          </button>
+          <button class="footer-button" id="history-button">
+            <i class="fas fa-history"></i>
+            History
+          </button>
+          <button class="footer-button" id="feedback-button">
+            <i class="fas fa-comment"></i>
+            Feed Back
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -57,7 +57,7 @@ body {
   flex-direction: column;
   align-items: stretch;
   scrollbar-width: thin;
-  margin-bottom: 180px; /* Add space for the fixed input container */
+  margin-bottom: 200px; /* Add space for the fixed input container */
 }
 
 /* Hide scrollbar arrows in Firefox */

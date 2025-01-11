@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "BESA-bot",
-    "version": "1.0.0",
+    "name": "BESA",
+    "version": "1.1.0",
     "description": "BESA helps you understand complex text by providing instant, AI-powered explanations when you select text on any webpage.",
     "author": "hello@trybesa.com",
     "minimum_chrome_version": "116",
